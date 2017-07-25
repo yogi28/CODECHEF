@@ -116,20 +116,19 @@ void printsp_llu(llu n)		{int i=21;char output_buffer[22];output_buffer[21]=sp;d
         ( std::ostringstream() << std::dec << x ) ).str()
  
  
- 
- 
 int main()
 {
-	int t,n;
-	lld ans;
-	t=scan_d();
-	while(t--)
+	lld i,a,b,ans;
+	lld temp;
+	a=scan_d();
+	b=scan_d();
+	ans=0;
+	fue(i,1,a)
 	{
-		ans=0;
-		n=scan_d();
-		while(n--)
-			ans|=(scan_lld());
-		println_lld(ans);
+		temp=(i*i)+b;
+		temp=sqrt(temp);
+		ans+=(temp-i);
 	}
+	println_lld(ans);
 	return 0;
 }
